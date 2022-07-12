@@ -18,7 +18,8 @@
 ;@Ahk2Exe-SetLanguage 0x1009
 ;@Ahk2Exe-SetOrigFilename Infinity Desktop.ahk
 
-;@Ahk2Exe-Base C:\Users\kongda\AppData\Roaming\AutoHotkey_2.0-beta.6\AutoHotkey64.exe, C:\Users\kongda\Documents\GitHub\Infinity-Desktop\target\InfinityDesktop
+;@Ahk2Exe-Base C:\Users\kongda\AppData\Roaming\AutoHotkey_2.0-beta.6\AutoHotkey32.exe, C:\Users\kongda\Documents\GitHub\Infinity-Desktop\target\InfinityDesktop32
+;@Ahk2Exe-Base C:\Users\kongda\AppData\Roaming\AutoHotkey_2.0-beta.6\AutoHotkey64.exe, C:\Users\kongda\Documents\GitHub\Infinity-Desktop\target\InfinityDesktop64
 
 ;@Ahk2Exe-SetMainIcon media\Icon.ico
 
