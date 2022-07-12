@@ -18,7 +18,7 @@
 ;@Ahk2Exe-SetLanguage 0x1009
 ;@Ahk2Exe-SetOrigFilename Infinity Desktop.ahk
 
-;@Ahk2Exe-Base C:\Users\kongda\AppData\Roaming\AutoHotkey_2.0-beta.6\AutoHotkey64.exe, C:\Users\kongda\Desktop\
+;@Ahk2Exe-Base C:\Users\kongda\AppData\Roaming\AutoHotkey_2.0-beta.6\AutoHotkey64.exe, C:\Users\kongda\Documents\GitHub\Infinity-Desktop\target\
 
 ;@Ahk2Exe-SetMainIcon media\Icon.ico
 
@@ -59,14 +59,14 @@ If (!DirExist(ResourcesPath)) {
 
 SetWorkingDir(ResourcesPath)
 
-FileInstall("C:\Users\kongda\Documents\AutoHotkey\Infinity Desktop\mstscReader.ps1", "mstscReader.ps1", 1)
-FileInstall("C:\Users\kongda\Documents\AutoHotkey\Infinity Desktop\mstscMonitors.json", "mstscMonitors.json", 1)
+FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\mstscReader.ps1", "mstscReader.ps1", 1)
+FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\mstscMonitors.json", "mstscMonitors.json", 1)
 
 If (FileExist(A_MyDocuments "\Default.rdp")) {
 	FileCopy(A_MyDocuments "\Default.rdp", "custom.rdp", 1)
 	FileSetAttrib("-RSH", "custom.rdp")
 } Else {
-	FileInstall("C:\Users\kongda\Documents\AutoHotkey\Infinity Desktop\custom.rdp", "custom.rdp", 1)
+	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\custom.rdp", "custom.rdp", 1)
 }
 
 If (FileExist("config.ini")) {
