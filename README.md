@@ -5,8 +5,9 @@ Infinity Desktop enables fast monitor selection for Windows' [Remote Desktop Con
 - Provides fast and easy selection of monitors used when using RDC
 - Remembers the selected monitors from the last session
 - Allows customization with essential settings
+- Is standalone
 
 # Installation
-
+1. Download the executable file
 
 # How To Use
