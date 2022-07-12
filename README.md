@@ -9,12 +9,13 @@ Infinity Desktop enables fast monitor selection for Windows' [Remote Desktop Con
 
 # Installation
 1. Download the executable file
+
 |Version|Operating System|Download URL|
-|---|---|---|---|
+|---|---|---|
 |[v1.0.0.3-beta](https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.0.0.3-beta)|Windows 10 32-bit|[Download](https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.0.0.3-beta/InfinityDesktop32.exe)|
 ||Windows 10 64-bit|[Download](https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.0.0.3-beta/InfinityDesktop64.exe)|
 
-2. Make sure you have [Remote Desktop Connection](https://support.microsoft.com/en-us/windows/) installed (it should be by default)
+2. Make sure you have [Remote Desktop Connection](https://support.microsoft.com/en-us/windows/) installed (it should be by default) and follow the steps to enable the feature on Windows
 
 # How To Use
 To connect to your remote desktop using multiple monitors, double-click on the executable file to open it. All of your screens will turn black for a moment and once everything is loaded, you will see numbers appearing on each monitor. These numbers represent the monitors' IDs.
