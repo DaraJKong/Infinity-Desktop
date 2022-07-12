@@ -9,6 +9,11 @@ Infinity Desktop enables fast monitor selection for Windows' [Remote Desktop Con
 
 # Installation
 1. Download the executable file
+|Version|Operating System|Download URL|
+|---|---|---|---|
+|[v1.0.0.3-beta](https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.0.0.3-beta)|Windows 10 32-bit|[Download](https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.0.0.3-beta/InfinityDesktop32.exe)|
+||Windows 10 64-bit|[Download](https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.0.0.3-beta/InfinityDesktop64.exe)|
+
 2. Make sure you have [Remote Desktop Connection](https://support.microsoft.com/en-us/windows/) installed (it should be by default)
 
 # How To Use
