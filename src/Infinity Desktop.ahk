@@ -14,11 +14,11 @@
 ;@Ahk2Exe-SetDescription Fast Monitor Selection for Remote Desktop Connection
 ;@Ahk2Exe-SetCopyright © 2022 Dara Kong. All rights reserved.
 ;@Ahk2Exe-SetCompanyName BRP
-;@Ahk2Exe-SetVersion 1.0.0.2
+;@Ahk2Exe-SetVersion 1.0.0.3
 ;@Ahk2Exe-SetLanguage 0x1009
 ;@Ahk2Exe-SetOrigFilename Infinity Desktop.ahk
 
-;@Ahk2Exe-Base C:\Users\kongda\AppData\Roaming\AutoHotkey_2.0-beta.6\AutoHotkey64.exe, C:\Users\kongda\Documents\GitHub\Infinity-Desktop\target\
+;@Ahk2Exe-Base C:\Users\kongda\AppData\Roaming\AutoHotkey_2.0-beta.6\AutoHotkey64.exe, C:\Users\kongda\Documents\GitHub\Infinity-Desktop\target\InfinityDesktop
 
 ;@Ahk2Exe-SetMainIcon media\Icon.ico
 
