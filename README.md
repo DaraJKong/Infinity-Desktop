@@ -11,3 +11,12 @@ Infinity Desktop enables fast monitor selection for Windows' [Remote Desktop Con
 1. Download the executable file
 
 # How To Use
+
+
+# TODO
+- Remember relative positions of selected monitors (main monitor, left, middle, right, first, last) and implement universal pattern that adapts when number of monitors is not the same (instead of remembering IDs)
+- Workaround for not able to select monitors of different resolutions
+- Notify user when selected monitors are of different resolutions and might not give expected results
+- Enable user to change settings easily
+- How to use tips and shortcuts map
+- Easy remembering, saving, managing RDP config file and reload settings automatically
