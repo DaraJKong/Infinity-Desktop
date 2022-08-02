@@ -1,4 +1,4 @@
-# Infinity Desktop <img src="media/Icon.png" style="height: 2em; vertical-align: middle !important;"></img>
+# Infinity Desktop <img src="media/Icon.png" class="IDInlineIcon" />
 Infinity Desktop permet la sélection rapide de plusieurs écrans pour la [Remote Desktop Connection][RDC] de Windows.
 
 Are you looking for the [English documentation][ENDOCS]?
@@ -87,3 +87,11 @@ Pour désinstaller manuellement Infinity Desktop, il suffit de supprimer le dosi
 [V1]: https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.0.0.3-beta
 [V1URL1]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.0.0.3-beta/InfinityDesktop32.exe
 [V1URL1]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.0.0.3-beta/InfinityDesktop64.exe
+
+<style>
+   .IDInlineIcon {
+      height: 2em;
+      display: inline-block !important;
+      vertical-align: middle !important;
+   }
+</style>
