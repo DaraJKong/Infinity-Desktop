@@ -1,48 +1,89 @@
-# About
-Infinity Desktop enables fast monitor selection for Windows' [Remote Desktop Connection](https://support.microsoft.com/en-us/windows/how-to-use-remote-desktop-5fe128d5-8fb1-7a23-3b8a-41e636865e8c).
+# Infinity Desktop <img src="media/Icon.png" style="height: 2em; vertical-align: middle;"></img>
+Infinity Desktop permet la sélection rapide de plusieurs écrans pour la [Remote Desktop Connection][RDC] de Windows.
 
-# Features
-- Provides fast and easy selection of monitors used when using RDC
-- Remembers the selected monitors from the last session
-- Allows customization with essential settings
-- Is standalone
+Are you looking for the [English documentation](ENDOCS "English Documentation")?
+
+#### Table des matières
+1. [Fonctionnalités](#fonctionnalités)
+2. [Installation](#installation)
+3. [Guide d'utilisation](#guide-dutilisation)
+   - [Configuration](#configuration)
+   - [Paramètres RDP par défaut](#paramètres-rdp-par-défaut)
+4. [Dépannage](#dépannage)
+5. [Désinstallation](#désinstallation)
+6. [À FAIRE](#à-faire)
+
+# Fonctionnalités
+- Permet la sélection rapide de plusieurs écrans lors de la connection à un bureau à distance
+- Se souvient des écrans précédemment sélectionnés
+- Est personnalisable grâce à un fichier de configuration
+- Installation facile
 
 # Installation
-1. Download the executable file
+1. Téléchargez le fichier exécutable:
 
-|Version|Operating System|Download URL|
-|---|---|---|
-|[v1.0.0.3-beta](https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.0.0.3-beta)|Windows 10 32-bit|[Download](https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.0.0.3-beta/InfinityDesktop32.exe)|
-||Windows 10 64-bit|[Download](https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.0.0.3-beta/InfinityDesktop64.exe)|
+| Version             | Système d'exploitation | URL de téléchargement |
+|---------------------|------------------------|-----------------------|
+| [v1.0.0.3-beta][V1] | Windows 10 32-bit      | [Télécharger][V1URL1] |
+|                     | Windows 10 64-bit      | [Télécharger](V1URL2) |
 
-2. Make sure you have [Remote Desktop Connection](https://support.microsoft.com/en-us/windows/) installed (it should be by default) and follow the steps to enable the feature on Windows
+2. Si RDC est déjà installé et activé, sautez cette étape. Suivez le lien suivant afin d'installer et/ou activer [Remote Desktop Connection][RDC].
 
-# How To Use
-To connect to your remote desktop using multiple monitors, double-click on the executable file to open it. All of your screens will turn black for a moment and once everything is loaded, you will see numbers appearing on each monitor. These numbers represent the monitors' IDs.
+3. Ouvrez l'exécutable que vous avez téléchargé.
 
-Left-click on any screen to select or unselect it. A yellow background means the monitor is selected for the remote connection. Monitors you don't select will be used for your current computer. Once you are satisfied with your setup, simply press the Enter key or the Space key. The screens will go back to normal as the remote connection is starting using a custom RDP file.
+4. Si un message d'avertissement apparaît, veuillez vous référer à la section [Dépannage](#dépannage).
 
-To cancel the remote connection, you can press the Escape key, the Delete key or the Backspace key.
+# Guide d'utilisation
+Pour vous connecter à votre bureau à distance en utilisant plusieurs écrans, boucle-cliquez sur le fichier exécutable afin de l'ouvrir. Chacun de vos écrans va devenir noir pendant un moment, le temps que l'application charge, puis chaque d'eux affichera un chiffre représentant son numéro d'identification.
 
-The app will create a folder named "Infinity Desktop" in the directory "C:\Users\kongda\AppData\Roaming\". You will find a useful configuration file in it where settings are stored.
+Faites un clic gauche sur n'importe quel écran pour le sélectioner ou le désélectionner. Un fond d'écran jaune signifie que l'écran sera utilisé pour l'ordinateur à distance. Les moniteurs non sélectionnés vont servir pour votre ordinateur portable (ou l'ordinateur que vous utilisez en ce moment). Lorsque vous êtes satisfait, appuyez sur la touche Entrer (Enter) ou la Barre d'espace. Les écrans vont retrouver leur état naturel et la connection à distance va s'ouvrir en utilisant les paramètres d'un fichier RDP personnalisé.
 
-## Default.rdp
-The "Default.rdp" file is created by default by the [Remote Desktop Connection](https://support.microsoft.com/en-us/windows/) software. It is hidden and located into your Documents folder ("C:\Users\kongda\Documents\Default.rdp"). Infinity Desktop will always pull settings from this file so make sure you save your favorite configuration there.
+Pour annuler la connection à distance, il suffit d'appuyer sur la touche Échap (ESC), la touche Supprimer (DEL) ou la touche Retour arrière (Backspace).
 
-## Settings
-### Fullscreen
-Sets whether the screen overlays are displayed in fullscreen or not. Set to 1 for the app to be in fullscreen mode or 0 to disable the setting.
+L'application va créer un dossier nommé « Infinity Desktop » dans votre répertoire « C:\\Users\\{NOM D'UTILISATEUR}\\AppData\\Roaming\\. » Dans celui-ci, vous trouverez un fichier de configuration assez utile où les paramètres de l'application sont enregistrés. Remplacez « {NOM D'UTILISATEUR} » par votre nom d'utilisateur pour trouver dossier, car le chemin varie en fonction de qui utilise l'ordinateur.
 
-### EditConnection
-If set to 1, the remote connection will enable you to edit the settings before proceding. Set to 0 if you want to skip that step. It is recommended to save your remote connection settings to the "Default.rdp" file before disabling this setting, because it ensures you always connect with the right configuration.
+## Configuration
+Pour modifier ou consulter les paramètres d'Infinity Desktop, ouvrez le fichier de configuration « C:\\Users\\{NOM D'UTILISATEUR}\\AppData\\Roaming\\Infinity Desktop\\config.ini » dans un éditeur de texte (Bloc-notes ou Notepad++). Afin de naviguer rapidement à votre dossier, vous pouvez entrer « %APPDATA% » dans le champ en haut de l'exploratuer Windows. Ce raccourci vous apportera directement au dossier « C:\\Users\\{NOM D'UTILISATEUR}\\AppData\\Roaming\\. » Sinon, remplacez « {NOM D'UTILISATEUR} » par votre nom d'utilisateur dans le chemin.
 
-## Not able to run the app?
-For security reasons, Windows sometimes will ask you if you trust the file before executing it.
+#### **Plein écran (Fullscreen)**
+> Détermine si l'application (seulement l'application de sélection des écrans) soit en plein écran ou non. Mettre à 1 pour que l'application soit en plain écran ou à 0 pour que la barre des tâches reste visible lors de la sélection des moniteurs.
 
-# TODO
-- Remember relative positions of selected monitors (main monitor, left, middle, right, first, last) and implement universal pattern that adapts when number of monitors is not the same (instead of remembering IDs)
-- Workaround for not able to select monitors of different resolutions
-- Notify user when selected monitors are of different resolutions and might not give expected results
-- Enable user to change settings easily
-- How to use tips and shortcuts map
-- Easy remembering, saving, managing RDP config file and reload settings automatically
+#### **Édition de la connection (EditConnection)**
+> Si ce paramètre est mis à 1, la connection à distance va vous permettre de modifier les options de connection avant de continuer. Mettez à 0 si vous voulez gagner du temps en désactivant la possibilité de modifier les options à chaque fois. Il est recommandé de sauvegarder vos paramètres de connection dans le fichier « Default.rdp » (voir la section [Paramètres RDP par défaut](#paramètres-rdp-par-défaut)) avant de désactiver ce paramètre, car cela vous permettra d'avoir toujours les mêmes options sans avoir à rentrer les informations à chaque fois.
+
+## Paramètres RDP par défaut
+Le fichier « Default.rdp » est automatiquement créé par le logiciel [Remote Desktop Connection][RDC]. Il est invisible et est situé dans votre répertoire Documents (« C:\\Users\\{NOM D'UTILISATEUR}\\Documents\\Default.rdp »). Infinity Desktop va copier les options contenues dans ce fichier à chaque utilisation afin d'avoir les derniers paramètres par défaut enregistrés. Pour information seulement, le fichier est dupliqué et est placé dans « C:\\Users\\{NOM D'UTILISATEUR}\\AppData\\Roaming\\Infinity Desktop\\custom.rdp. »
+
+Si vous désirez sauver du temps, il est fortement conseillé d'enregistrer vos préférences dans ce fichier. Cela peut se faire à l'aide du même logiciel de connection [Remote Desktop Connection][RDC]. Il suffit de cliquer sur « Afficher les options, » changer les paramètres au goût, entrer votre nom d'utilisateur et appuyer sur « Enregistrer. »
+
+![La fenêtre de connection à distance](media/RDC_1.png)
+
+![Les options de connection à distance](media/RDC_2.png)
+
+# Dépannage
+Pour des raisons de sécurité, [Microsoft Defender SmartScreen][MSDSS] empêche parfois l'exécution d'applications inconnues. Si vous avez confiance en l'auteur de cette application, cliquez sur « Informations complémentaires, » et puis sur « Exécuter quand même. »
+
+![Alerte de MS Defender SmartScreen](media/MS_Defender_SmartScreen_1.png)
+
+![MS Defender SmartScreen : Exécuter quand même](media/MS_Defender_SmartScreen_2.png)
+
+# Désinstallation
+Pour désinstaller manuellement Infinity Desktop, il suffit de supprimer le dosier « C:\\Users\\{NOM D'UTILISATEUR}\\AppData\\Roaming\\Infinity Desktop\\, » puis de supprimer l'exécutable et les raccourcis créés par vous (Bureau, Barre des tâches, Menu démarrer). Le programme ne modifie rien d'autre que le dossier mentionné ci-haut ainsi que la clé de registre « HKCU\\AppEvents\\Schemes\\Apps\\.Default\\SystemAsterisk\\.Current » de façon très temporaire. Alors pas besoin de s'en préoccuper, car la valeur de la clé est toujours restaurée.
+
+# À FAIRE
+- Permettre à l'utilisateur de changer facilement les paramètres
+- Rappels des raccourcis clavier ainsi que de comment utiliser, URL vers Github
+- Notifier l'utilisateur lorsqu'il sélectionne des écrans de différentes résolutions que le résultat peut ne pas être celui désiré
+- Sauvegarde, gestion, chargement faciles du fichier de configuration et du fichier de connection
+- Solution de contournement pour sélectionner des écrans de différentes résolutions
+- Solution de contournement pour que la résolutions et l'échelle des écrans soit toujours correcte
+- Se souvenir des positions relatives des écrans (écran principal, gauche, droite, milieu, premier, dernier etc.) et implémenter un algorithme universel qui adapte les numéros lorsqu'ils changent (en plus de se souvenir des numéros d'identification)
+- Créer un désinstallateur automatique
+
+[RDC]: https://support.microsoft.com/fr-fr/windows/utilisation-du-bureau-%C3%A0-distance-5fe128d5-8fb1-7a23-3b8a-41e636865e8c
+[MSDSS]: https://docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview
+
+[ENDOCS]: https://github.com/DaraJKong/Infinity-Desktop/blob/main/README.en.md
+[V1]: https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.0.0.3-beta
+[V1URL1]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.0.0.3-beta/InfinityDesktop32.exe
+[V1URL1]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.0.0.3-beta/InfinityDesktop64.exe
