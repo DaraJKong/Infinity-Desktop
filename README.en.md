@@ -1,7 +1,5 @@
-<div style="display: flex; align-items: center;">
-# Infinity Desktop
-<img src="media/Icon.png" style="height: 2em;" />
-</div>
+![Infinity Desktop](media/Logo.png)
+
 Infinity Desktop enables fast multi monitor selection for Windows' [Remote Desktop Connection][RDC].
 
 Cherches-tu la [documentation en fraçais][FRDOCS] ?
