@@ -1,7 +1,7 @@
 # Infinity Desktop <img src="media/Icon.png" style="height: 2em; vertical-align: middle;"></img>
 Infinity Desktop permet la sélection rapide de plusieurs écrans pour la [Remote Desktop Connection][RDC] de Windows.
 
-Are you looking for the [English documentation](ENDOCS "English Documentation")?
+Are you looking for the [English documentation][ENDOCS]?
 
 #### Table des matières
 1. [Fonctionnalités](#fonctionnalités)
