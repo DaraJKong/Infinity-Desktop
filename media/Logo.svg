@@ -28,8 +28,8 @@
      showgrid="true"
      units="px"
      inkscape:zoom="2.5273437"
-     inkscape:cx="309.61361"
-     inkscape:cy="129.78053"
+     inkscape:cx="403.38795"
+     inkscape:cy="135.71561"
      inkscape:window-width="2880"
      inkscape:window-height="1526"
      inkscape:window-x="2869"
@@ -83,13 +83,13 @@
     <inkscape:page
        x="3.5937499e-15"
        y="41.142506"
-       width="151.54732"
+       width="213.83685"
        height="23.812508"
        id="page3435"
        inkscape:label="Logo"
        inkscape:export-filename="Logo.png"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96" />
+       inkscape:export-xdpi="159.99992"
+       inkscape:export-ydpi="159.99992" />
   </sodipodi:namedview>
   <defs
      id="defs2">
@@ -355,20 +355,20 @@
     <path
        id="rect1873"
        style="fill:#1b2021;stroke:#8693ab;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stop-color:#000000"
-       d="m 31.977833,46.25658 113.748637,0 a 5.2916667,5.2916667 45 0 1 5.29167,5.291667 l 0,2.823428 a 5.2916667,5.2916667 135 0 1 -5.29167,5.291667 l -113.748637,0 a 5.2916667,5.2916667 45 0 1 -5.291667,-5.291667 v -2.823428 a 5.2916667,5.2916667 135 0 1 5.291667,-5.291667 z"
+       d="m 31.977833,46.25658 176.038187,0 a 5.2916667,5.2916667 45 0 1 5.29166,5.291667 v 2.823428 a 5.2916667,5.2916667 135 0 1 -5.29166,5.291667 l -176.038187,0 a 5.2916667,5.2916667 45 0 1 -5.291667,-5.291667 v -2.823428 a 5.2916667,5.2916667 135 0 1 5.291667,-5.291667 z"
        inkscape:path-effect="#path-effect2743"
-       inkscape:original-d="m 26.686166,46.25658 124.331974,0 v 13.406762 l -124.331974,0 z"
+       inkscape:original-d="m 26.686166,46.25658 186.621514,0 v 13.406762 l -186.621514,0 z"
        sodipodi:nodetypes="ccccc" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:12.3472px;line-height:1.25;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#fcca04;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
-       x="43.764145"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:12.3472px;line-height:1.25;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.529167px;word-spacing:1.05833px;display:inline;fill:#fcca04;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
+       x="64.073677"
        y="57.304977"
        id="text3491"><tspan
          sodipodi:role="line"
          id="tspan3489"
          style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:12.3472px;font-family:Poppins;-inkscape-font-specification:'Poppins, Semi-Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fcca04;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-opacity:1"
-         x="43.764145"
+         x="64.073677"
          y="57.304977">Infinity Desktop</tspan></text>
     <g
        id="g3148">
