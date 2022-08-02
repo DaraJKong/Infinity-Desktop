@@ -1,4 +1,4 @@
-# Infinity Desktop <span style="vertical-align:middle;"><img src="media/Icon.png" style="height:2em;"></img></span>
+# Infinity Desktop <span style="vertical-align: middle !important;"><img src="media/Icon.png" style="height: 2em;"></img></span>
 Infinity Desktop enables fast multi monitor selection for Windows' [Remote Desktop Connection][RDC].
 
 Cherches-tu la [documentation en fraçais][FRDOCS] ?
