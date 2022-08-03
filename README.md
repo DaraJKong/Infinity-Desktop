@@ -19,7 +19,7 @@ Are you looking for the [English documentation][endocs]?
 
 # Fonctionnalités
 
-- Permet la sélection rapide de plusieurs écrans lors de la connection à un bureau à distance
+- Permet la sélection rapide de plusieurs écrans lors de la connexion à un bureau à distance
 - Se souvient des écrans précédemment sélectionnés
 - Est personnalisable grâce à un fichier de configuration
 - Installation facile
@@ -43,9 +43,9 @@ Are you looking for the [English documentation][endocs]?
 
 Pour vous connecter à votre bureau à distance en utilisant plusieurs écrans, boucle-cliquez sur le fichier exécutable afin de l'ouvrir. Chacun de vos écrans va devenir noir pendant un moment, le temps que l'application charge, puis chaque d'eux affichera un chiffre représentant son numéro d'identification.
 
-Faites un clic gauche sur n'importe quel écran pour le sélectioner ou le désélectionner. Un fond d'écran jaune signifie que l'écran sera utilisé pour l'ordinateur à distance. Les moniteurs non sélectionnés vont servir pour votre ordinateur portable (ou l'ordinateur que vous utilisez en ce moment). Lorsque vous êtes satisfait, appuyez sur la touche Entrer (Enter) ou la Barre d'espace. Les écrans vont retrouver leur état naturel et la connection à distance va s'ouvrir en utilisant les paramètres d'un fichier RDP personnalisé.
+Faites un clic gauche sur n'importe quel écran pour le sélectioner ou le désélectionner. Un fond d'écran jaune signifie que l'écran sera utilisé pour l'ordinateur à distance. Les moniteurs non sélectionnés vont servir pour votre ordinateur portable (ou l'ordinateur que vous utilisez en ce moment). Lorsque vous êtes satisfait, appuyez sur la touche Entrer (Enter) ou la Barre d'espace. Les écrans vont retrouver leur état naturel et la connexion à distance va s'ouvrir en utilisant les paramètres d'un fichier RDP personnalisé.
 
-Pour annuler la connection à distance, il suffit d'appuyer sur la touche Échap (ESC), la touche Supprimer (DEL) ou la touche Retour arrière (Backspace).
+Pour annuler la connexion à distance, il suffit d'appuyer sur la touche Échap (ESC), la touche Supprimer (DEL) ou la touche Retour arrière (Backspace).
 
 L'application va créer un dossier nommé « Infinity Desktop » dans votre répertoire « C:\\Users\\{NOM D'UTILISATEUR}\\AppData\\Roaming\\. » Dans celui-ci, vous trouverez un fichier de configuration assez utile où les paramètres de l'application sont enregistrés. Remplacez « {NOM D'UTILISATEUR} » par votre nom d'utilisateur pour trouver dossier, car le chemin varie en fonction de qui utilise l'ordinateur.
 
@@ -57,19 +57,19 @@ Pour modifier ou consulter les paramètres d'Infinity Desktop, ouvrez le fichier
 
 > Détermine si l'application (seulement l'application de sélection des écrans) soit en plein écran ou non. Mettre à 1 pour que l'application soit en plain écran ou à 0 pour que la barre des tâches reste visible lors de la sélection des moniteurs.
 
-#### **Édition de la connection (EditConnection)**
+#### **Édition de la connexion (EditConnection)**
 
-> Si ce paramètre est mis à 1, la connection à distance va vous permettre de modifier les options de connection avant de continuer. Mettez à 0 si vous voulez gagner du temps en désactivant la possibilité de modifier les options à chaque fois. Il est recommandé de sauvegarder vos paramètres de connection dans le fichier « Default.rdp » (voir la section [Paramètres RDP par défaut](#paramètres-rdp-par-défaut)) avant de désactiver ce paramètre, car cela vous permettra d'avoir toujours les mêmes options sans avoir à rentrer les informations à chaque fois.
+> Si ce paramètre est mis à 1, la connexion à distance va vous permettre de modifier les options de connexion avant de continuer. Mettez à 0 si vous voulez gagner du temps en désactivant la possibilité de modifier les options à chaque fois. Il est recommandé de sauvegarder vos paramètres de connexion dans le fichier « Default.rdp » (voir la section [Paramètres RDP par défaut](#paramètres-rdp-par-défaut)) avant de désactiver ce paramètre, car cela vous permettra d'avoir toujours les mêmes options sans avoir à rentrer les informations à chaque fois.
 
 ## Paramètres RDP par défaut
 
 Le fichier « Default.rdp » est automatiquement créé par le logiciel [Remote Desktop Connection][rdc]. Il est invisible et est situé dans votre répertoire Documents (« C:\\Users\\{NOM D'UTILISATEUR}\\Documents\\Default.rdp »). Infinity Desktop va copier les options contenues dans ce fichier à chaque utilisation afin d'avoir les derniers paramètres par défaut enregistrés. Pour information seulement, le fichier est dupliqué et est placé dans « C:\\Users\\{NOM D'UTILISATEUR}\\AppData\\Roaming\\Infinity Desktop\\custom.rdp. »
 
-Si vous désirez sauver du temps, il est fortement conseillé d'enregistrer vos préférences dans ce fichier. Cela peut se faire à l'aide du même logiciel de connection [Remote Desktop Connection][rdc]. Il suffit de cliquer sur « Afficher les options, » changer les paramètres au goût, entrer votre nom d'utilisateur et appuyer sur « Enregistrer. »
+Si vous désirez sauver du temps, il est fortement conseillé d'enregistrer vos préférences dans ce fichier. Cela peut se faire à l'aide du même logiciel de connexion [Remote Desktop Connection][rdc]. Il suffit de cliquer sur « Afficher les options, » changer les paramètres au goût, entrer votre nom d'utilisateur et appuyer sur « Enregistrer. »
 
-![La fenêtre de connection à distance](media/RDC_1.png)
+![La fenêtre de connexion à distance](media/RDC_1.png)
 
-![Les options de connection à distance](media/RDC_2.png)
+![Les options de connexion à distance](media/RDC_2.png)
 
 # Dépannage
 
@@ -98,7 +98,7 @@ Pour désinstaller manuellement Infinity Desktop, il suffit de supprimer le dosi
 - Permettre à l'utilisateur de changer facilement les paramètres
 - Rappels des raccourcis clavier ainsi que de comment utiliser, URL vers Github
 - Notifier l'utilisateur lorsqu'il sélectionne des écrans de différentes résolutions que le résultat peut ne pas être celui désiré
-- Sauvegarde, gestion, chargement faciles du fichier de configuration et du fichier de connection
+- Sauvegarde, gestion, chargement faciles du fichier de configuration et du fichier de connexion
 - Solution de contournement pour sélectionner des écrans de différentes résolutions
 - Solution de contournement pour que la résolutions et l'échelle des écrans soit toujours correcte
 - Se souvenir des positions relatives des écrans (écran principal, gauche, droite, milieu, premier, dernier etc.) et implémenter un algorithme universel qui adapte les numéros lorsqu'ils changent (en plus de se souvenir des numéros d'identification)
