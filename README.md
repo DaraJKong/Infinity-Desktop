@@ -13,7 +13,7 @@ Are you looking for the [English documentation][endocs]?
    - [Paramètres RDP par défaut](#paramètres-rdp-par-défaut)
 4. [Dépannage](#dépannage)
    - [Avertissement de Microsoft Defender SmartScreen](#avertissement-de-microsoft-defender-smartscreen)
-   - [Erreur : mauvaise variante](#erreur-mauvaise-variante)
+   - [Erreur : mauvaise variante](#erreur--mauvaise-variante)
 5. [Désinstallation](#désinstallation)
 6. [À FAIRE](#à-faire)
 
