@@ -28,12 +28,10 @@
 ;@Ahk2Exe-AddResource media\IconP.ico, 207
 ;@Ahk2Exe-AddResource media\IconSP.ico, 208
 
-
-
 Config := {
-	Fullscreen: True,
-	EditConnection: True
-}
+		Fullscreen: True,
+		EditConnection: True
+	}
 
 ResourcesPath := A_AppData "\Infinity Desktop"
 
@@ -47,8 +45,6 @@ HoveredMonitor := 0
 
 MouseX := 0
 MouseY := 0
-
-
 
 If (!DirExist(ResourcesPath)) {
 	DirCreate(ResourcesPath)
@@ -83,35 +79,31 @@ If (!DirExist("media")) {
 	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\media\Keyboard_Keys_Selected_Text.png", "media\KBK_ST.png", 1)
 }
 
-
-
 /*@Ahk2Exe-Keep
 	RegExMatch(A_AhkPath, "im)(32|64)(?=\.exe$)", &match)
 	U_Is64bitExe := match[] = "64"
-	
+
 	If (U_Is64bitExe != A_Is64bitOS) {
 		MsgBox("Vous avez la mauvaise variante d'Infinity Desktop !`n`nVotre système d'exploitation est en " (A_Is64bitOS ? "64" : "32") "-bit, mais cet exécutable est en " (U_Is64bitExe ? "64" : "32") "-bit. Veuillez télécharger la bonne variante pour votre système.`n`nCet avertissement peut aussi apparaître après avoir renommé le fichier .exe. Utilisez un raccourci à la place de renommer ce fichier.`n`n---------------------------------------------`n`nYou have the wrong variant of Infinity Desktop!`n`nYour OS is " (A_Is64bitOS ? "64" : "32") "-bit but this executable is " (U_Is64bitExe ? "64" : "32") "-bit. Please download the right variant for your system.`n`nThis message might also appear because you renamed the .exe file. Use a shortcut instead of renaming this file.", , "Iconx")
 
 		ExitApp
 	}
-*/
+ */
 
 ;@Ahk2Exe-IgnoreBegin
-	CoordMode "ToolTip", "Screen"
-	
-	Console := Gui("-DPIScale +AlwaysOnTop -Caption -Border")
-	ConsoleSize := [1200, 30]
-	Console.BackColor := "FFFFFF"
-	ConsoleText := Console.Add("Text", "xm ym 0x200 x0 y0 w" ConsoleSize[1] " h" ConsoleSize[2], "Hide")
-	ConsoleText.SetFont("c000000 s12 q4", "Calibri")
-	
-	Log(Txt) {
-		ConsoleText.Text := Txt
-		Console.Show("x0 y0 w" ConsoleSize[1] " h" ConsoleSize[2])
-	}
+CoordMode "ToolTip", "Screen"
+
+Console := Gui("-DPIScale +AlwaysOnTop -Caption -Border")
+ConsoleSize := [1200, 30]
+Console.BackColor := "FFFFFF"
+ConsoleText := Console.Add("Text", "xm ym 0x200 x0 y0 w" ConsoleSize[1] " h" ConsoleSize[2], "Hide")
+ConsoleText.SetFont("c000000 s12 q4", "Calibri")
+
+Log(Txt) {
+	ConsoleText.Text := Txt
+	Console.Show("x0 y0 w" ConsoleSize[1] " h" ConsoleSize[2])
+}
 ;@Ahk2Exe-IgnoreEnd
-
-
 
 CoordMode "Mouse", "Screen"
 
@@ -120,7 +112,7 @@ DisableHotkeys()
 Loop MonitorGetCount() {
 	MonitorGet A_Index, &L, &T, &R, &B
 	MonitorGetWorkArea A_Index, &WL, &WT, &WR, &WB
-	
+
 	Monitors.Push({
 		ID: -1,
 		Left: L,
@@ -145,8 +137,7 @@ Monitors := SortArray(Monitors, CompareMonitors)
 For Monitor in Monitors {
 	Monitor.Gui.Opt("-DPIScale +AlwaysOnTop -Caption -Resize -Border" . (A_Index > 1 ? (" +Owner" Monitors[1].Gui.Hwnd) : ""))
 	Monitor.Gui.BackColor := "000000"
-	; WinSetTransparent(245, Monitor.Gui)
-	
+
 	If (Config.Fullscreen) {
 		mLeft := Monitor.Left
 		mTop := Monitor.Top
@@ -158,43 +149,43 @@ For Monitor in Monitors {
 		mRight := Monitor.WRight
 		mBottom := Monitor.WBottom
 	}
-	
+
 	mWidth := mRight - mLeft
 	mHeight := mBottom - mTop
-	
-	Monitor.Ctrls.Push({
-		c: Monitor.Gui.Add("Text", "Center xm ym 0x200"),
-		x: 0,
-		y: 0,
-		w: mHeight / 4,
-		h: mHeight / 4
-	})
-
-	Monitor.Ctrls[1].c.SetFont("s" (Monitor.Ctrls[1].h / 2) * 3/4 " w700 q4", "Arial")
 
 	Monitor.Ctrls.Push({
-		c: [
-			Monitor.Gui.Add("Picture", "BackgroundTrans", "media\KBK_T.png"),
-			Monitor.Gui.Add("Picture", "BackgroundTrans", "media\KBK_HT.png"),
-			Monitor.Gui.Add("Picture", "BackgroundTrans", "media\KBK_ST.png")
-		],
-		x: 0,
-		y: 0,
-		w: mHeight / 16 * (1957 / 104),
-		h: mHeight / 16
-	})
+			c: Monitor.Gui.Add("Text", "Center xm ym 0x200"),
+			x: 0,
+			y: 0,
+			w: mHeight / 4,
+			h: mHeight / 4
+		})
+
+	Monitor.Ctrls[1].c.SetFont("s" (Monitor.Ctrls[1].h / 2) * 3 / 4 " w700 q4", "Arial")
+
+	Monitor.Ctrls.Push({
+			c: [
+				Monitor.Gui.Add("Picture", "BackgroundTrans", "media\KBK_T.png"),
+				Monitor.Gui.Add("Picture", "BackgroundTrans", "media\KBK_HT.png"),
+				Monitor.Gui.Add("Picture", "BackgroundTrans", "media\KBK_ST.png")
+			],
+			x: 0,
+			y: 0,
+			w: mHeight / 16 * (1957 / 104),
+			h: mHeight / 16
+		})
 
 	For Control in Monitor.Ctrls[2].c {
 		Control.Visible := False
 	}
-	
+
 	CenterControl(Monitor.Ctrls[1], mLeft, mTop, mRight, mBottom)
 	CenterControl(Monitor.Ctrls[2], mLeft, mTop - (mBottom - mTop) * 0.9, mRight, mBottom)
 
 	UpdateControls(Monitor)
-	
+
 	Monitor.Gui.OnEvent("Close", ExitApp)
-	
+
 	Monitor.Gui.Show("x" mLeft " y" mTop " w" mWidth " h" mHeight)
 }
 
@@ -205,8 +196,6 @@ EnableHotkeys()
 SetTimer UpdateLoop, 50
 
 OnExit(BeforeExit, 1)
-
-
 
 ~LButton:: {
 	ToggleSelection(HoveredMonitor)
@@ -223,24 +212,22 @@ Escape:: {
 	ExitApp
 }
 
-
-
 UpdateLoop() {
 	global HoveredMonitor
-	
+
 	MouseGetPos(&MouseX, &MouseY)
-	
+
 	HoverDetermined := False
-	
+
 	For Monitor in Monitors {
 		If (!HoverDetermined && MouseX >= Monitor.Left && MouseX <= Monitor.Right && MouseY >= Monitor.Top && MouseY <= Monitor.Bottom) {
 			If (!Monitor.Hovered) {
 				Monitor.Hovered := True
 				Refresh()
 			}
-			
+
 			HoveredMonitor := A_Index
-			
+
 			HoverDetermined := True
 		} Else {
 			If (Monitor.Hovered) {
@@ -249,30 +236,30 @@ UpdateLoop() {
 			}
 		}
 	}
-	
+
 	If (!HoverDetermined) {
 		ClosestMonitor := 0
 		ClosestDistance := 16777216
-		
+
 		For Monitor in Monitors {
 			Center := [(Monitor.Right + Monitor.Left) / 2, (Monitor.Bottom + Monitor.Top) / 2]
 			Distance := Dist([MouseX, MouseY], Center)
-			
+
 			If (Distance < ClosestDistance) {
 				ClosestMonitor := A_Index
 				ClosestDistance := Distance
 			}
 		}
-		
+
 		For Monitor in Monitors {
 			If (A_Index == ClosestMonitor) {
 				If (!Monitor.Hovered) {
 					Monitor.Hovered := True
 					Refresh()
 				}
-				
+
 				HoveredMonitor := A_Index
-				
+
 				HoverDetermined := True
 			} Else {
 				If (Monitor.Hovered) {
@@ -314,7 +301,7 @@ Refresh() {
 				Monitor.Ctrls[2].c[1].Visible := True
 			}
 		}
-		
+
 		If (Config.Fullscreen) {
 			mLeft := Monitor.Left
 			mTop := Monitor.Top
@@ -326,7 +313,7 @@ Refresh() {
 			mRight := Monitor.WRight
 			mBottom := Monitor.WBottom
 		}
-		
+
 		If (Monitor.Hovered) {
 			Monitor.Ctrls[1].w := (mBottom - mTop) / 4 + 20
 			Monitor.Ctrls[1].h := Monitor.Ctrls[1].w
@@ -334,15 +321,15 @@ Refresh() {
 			Monitor.Ctrls[1].w := (mBottom - mTop) / 4
 			Monitor.Ctrls[1].h := Monitor.Ctrls[1].w
 		}
-		
-		Monitor.Ctrls[1].c.SetFont("s" (Monitor.Ctrls[1].h / 2) * 3/4)
-		
+
+		Monitor.Ctrls[1].c.SetFont("s" (Monitor.Ctrls[1].h / 2) * 3 / 4)
+
 		If (Monitor.ID >= 0) {
 			Monitor.Ctrls[1].c.Text := Monitor.ID
 		} Else {
 			Monitor.Ctrls[1].c.Text := ""
 		}
-		
+
 		CenterControl(Monitor.Ctrls[1], mLeft, mTop, mRight, mBottom)
 		UpdateControl(Monitor.Ctrls[1])
 	}
@@ -352,7 +339,7 @@ ToggleSelection(monitor) {
 	If (monitor > 0) {
 		If (Monitors[monitor].ID >= 0) {
 			Monitors[monitor].Selected := !Monitors[monitor].Selected
-			
+
 			UpdateIDs()
 			Refresh()
 		}
@@ -395,26 +382,26 @@ UpdateControls(monitor) {
 UpdateIDs() {
 	global SelectedIDs := Array()
 	global LastIDs
-	
+
 	For Monitor in Monitors {
 		Monitor.ID := MstscList[A_Index]["Index"]
-		
+
 		If (LastIDs.Length > 0 && HasVal(LastIDs, Monitor.ID) > 0) {
 			Monitor.Selected := True
 		}
-		
+
 		If (Monitor.Selected) {
 			SelectedIDs.Push(Monitor.ID)
 		}
 	}
-	
+
 	LastIDs := Array()
 }
 
 CompareMonitors(mon1, mon2) {
 	vOffset := mon2.CY - mon1.CY
 	hOffset := mon2.CX - mon1.CX
-	
+
 	If (hOffset == 0) {
 		Return vOffset
 	} Else {
@@ -425,7 +412,7 @@ CompareMonitors(mon1, mon2) {
 CompareMstsc(mstsc1, mstsc2) {
 	vOffset := (mstsc2["Top"] + mstsc2["Bottom"]) / 2 - (mstsc1["Top"] + mstsc1["Bottom"]) / 2
 	hOffset := (mstsc2["Left"] + mstsc2["Right"]) / 2 - (mstsc1["Left"] + mstsc1["Right"]) / 2
-	
+
 	If (hOffset == 0) {
 		Return vOffset
 	} Else {
@@ -435,17 +422,17 @@ CompareMstsc(mstsc1, mstsc2) {
 
 LoadData(filePath) {
 	global Config
-	
+
 	Config.Fullscreen := Integer(IniRead(filePath, "Configuration", "Fullscreen", "1"))
 	Config.EditConnection := Integer(IniRead(filePath, "Configuration", "EditConnection", "1"))
-	
+
 	global LastIDs := StrSplit(IniRead(filePath, "LocalData", "LastIDs", ""), ",", "`t")
 }
 
 SaveData(filePath) {
 	IniWrite(String(Config.Fullscreen), filePath, "Configuration", "Fullscreen")
 	IniWrite(String(Config.EditConnection), filePath, "Configuration", "EditConnection")
-	
+
 	IniWrite(Join(",", SelectedIDs*), filePath, "LocalData", "LastIDs")
 }
 
@@ -454,41 +441,39 @@ BeforeExit(exitReason, exitCode) {
 	RestoreSystemSound("SystemAsterisk")
 }
 
-
-
 SetRDPMultimon(filePath, value) {
 	RDPText := FileRead(filePath)
-	
+
 	If (RegExMatch(RDPText, "im)(?<=use\smultimon:i:).*$") > 0) {
 		RDPText := RegExReplace(RDPText, "im)(?<=use\smultimon:i:).*$", String(value))
 	} Else {
 		RDPText .= "use multimon:i:" value "`n"
 	}
-	
+
 	RDPFile := FileOpen(filePath, "w")
-		RDPFile.Write(RDPText)
+	RDPFile.Write(RDPText)
 	RDPFile.Close()
 }
 
 SetRDPSelectedMonitors(filePath, IDs) {
 	RDPText := FileRead(filePath)
-	
+
 	If (RegExMatch(RDPText, "im)^selectedmonitors:s:.*$") > 0) {
 		RDPText := RegExReplace(RDPText, "im)(?<=selectedmonitors:s:).*$", Join(",", IDs*))
 	} Else {
 		RDPText .= "selectedmonitors:s:" Join(",", IDs*) "`n"
 	}
-	
+
 	RDPFile := FileOpen(filePath, "w")
-		RDPFile.Write(RDPText)
+	RDPFile.Write(RDPText)
 	RDPFile.Close()
 }
 
 FindMstscList() {
 	DisableSystemSound("SystemAsterisk")
-	
+
 	DllCall("Shell32\SHChangeNotify", "UInt", 0x08000000, "UInt", 0, "Int", 0, "Int", 0)
-	
+
 	RunWait("PowerShell.exe -ExecutionPolicy Bypass -Command .\mstscReader.ps1", A_WorkingDir, "Hide")
 
 	MstscText := FileRead("mstscMonitors.json")
@@ -498,10 +483,10 @@ FindMstscList() {
 StartRemoteDesktop() {
 	SetRDPMultimon("custom.rdp", 1)
 	SetRDPSelectedMonitors("custom.rdp", SelectedIDs)
-	
+
 	Parameters := Config.EditConnection ? "/edit " : ""
-	
+
 	Run('mstsc.exe ' Parameters '"' A_WorkingDir '\custom.rdp"')
-	
+
 	ExitApp
 }
