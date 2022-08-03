@@ -1,6 +1,6 @@
 ![Infinity Desktop](media/Logo.png)
 
-Infinity Desktop enables fast multi monitor selection for Windows' [Remote Desktop Connection][RDC].
+Infinity Desktop enables fast multi monitor selection for Windows' [Remote Desktop Connection][RDC]. This app is based on [Scott Hanselman's blog post][BLOG].
 
 Cherches-tu la [documentation en fraçais][FRDOCS] ?
 
@@ -81,6 +81,7 @@ To uninstall Infinity Desktop manually, you need to delete the folder "C:\\Users
 - Remember relative positions of selected monitors (main monitor, left, middle, right, first, last) and implement universal pattern that adapts when number of monitors is not the same (in addition to remembering IDs)
 - Create automatic uninstaller
 
+[BLOG]: https://www.hanselman.com/blog/how-to-remote-desktop-fullscreen-rdp-with-just-some-of-your-multiple-monitors
 [RDC]: https://support.microsoft.com/en-us/windows/how-to-use-remote-desktop-5fe128d5-8fb1-7a23-3b8a-41e636865e8c
 [MSDSS]: https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview
 

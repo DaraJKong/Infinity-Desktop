@@ -1,6 +1,6 @@
 ![Infinity Desktop](media/Logo.png)
 
-Infinity Desktop permet la sélection rapide de plusieurs écrans pour la [Remote Desktop Connection][RDC] de Windows.
+Infinity Desktop permet la sélection rapide de plusieurs écrans pour la [Remote Desktop Connection][RDC] de Windows. Cette application est basée sur cet [article de Scott Hanselman][BLOG].
 
 Are you looking for the [English documentation][ENDOCS]?
 
@@ -81,6 +81,7 @@ Pour désinstaller manuellement Infinity Desktop, il suffit de supprimer le dosi
 - Se souvenir des positions relatives des écrans (écran principal, gauche, droite, milieu, premier, dernier etc.) et implémenter un algorithme universel qui adapte les numéros lorsqu'ils changent (en plus de se souvenir des numéros d'identification)
 - Créer un désinstallateur automatique
 
+[BLOG]: https://www.hanselman.com/blog/how-to-remote-desktop-fullscreen-rdp-with-just-some-of-your-multiple-monitors
 [RDC]: https://support.microsoft.com/fr-fr/windows/utilisation-du-bureau-%C3%A0-distance-5fe128d5-8fb1-7a23-3b8a-41e636865e8c
 [MSDSS]: https://docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview
 

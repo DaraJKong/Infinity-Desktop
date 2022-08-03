@@ -14,7 +14,7 @@
 ;@Ahk2Exe-SetDescription Fast Monitor Selection for Remote Desktop Connection
 ;@Ahk2Exe-SetCopyright © 2022 Dara Kong. All rights reserved.
 ;@Ahk2Exe-SetCompanyName BRP
-;@Ahk2Exe-SetVersion 1.0.4
+;@Ahk2Exe-SetVersion 1.1.1
 ;@Ahk2Exe-SetLanguage 0x1009
 ;@Ahk2Exe-SetOrigFilename Infinity Desktop.ahk
 
@@ -27,6 +27,10 @@
 ;@Ahk2Exe-AddResource media\IconS.ico, 206
 ;@Ahk2Exe-AddResource media\IconP.ico, 207
 ;@Ahk2Exe-AddResource media\IconSP.ico, 208
+
+; @Ahk2Exe-AddResource media\Keyboard_Keys_Text.png, IMG1
+; @Ahk2Exe-AddResource media\Keyboard_Keys_Hovered_Text.png, IMG2
+; @Ahk2Exe-AddResource media\Keyboard_Keys_Selected_Text.png, IMG3
 
 ; @Ahk2Exe-AddResource media\mstscReader.ps1
 ; @Ahk2Exe-AddResource media\mstscMonitors.json
@@ -60,8 +64,13 @@ If (!DirExist(ResourcesPath)) {
 
 SetWorkingDir(ResourcesPath)
 
-FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\mstscReader.ps1", "mstscReader.ps1", 1)
-FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\mstscMonitors.json", "mstscMonitors.json", 1)
+If (!FileExist("mstscReader.ps1")) {
+	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\mstscReader.ps1", "mstscReader.ps1", 1)
+}
+
+If (!FileExist("mstscMonitors.json")) {
+	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\mstscMonitors.json", "mstscMonitors.json", 1)
+}
 
 If (FileExist(A_MyDocuments "\Default.rdp")) {
 	FileCopy(A_MyDocuments "\Default.rdp", "custom.rdp", 1)
@@ -74,11 +83,44 @@ If (FileExist("config.ini")) {
 	LoadData("config.ini")
 }
 
+If (!DirExist("media")) {
+	DirCreate("media")
+
+	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\media\Keyboard_Keys_Text.png", "media\KBK_T.png", 1)
+	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\media\Keyboard_Keys_Hovered_Text.png", "media\KBK_HT.png", 1)
+	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\media\Keyboard_Keys_Selected_Text.png", "media\KBK_ST.png", 1)
+}
+
+/* @Ahk2Exe-Keep
+	hModule := DllCall("GetModuleHandle", "UInt", 0) ; A_ScriptFullPath, "Cdecl Ptr"
+
+	hImg1 := DllCall("LoadImage", "UInt", hModule, "Str", "IMG1", "UInt", 0, "Int", 0, "Int", 0, "UInt", 0)
+	hImg2 := DllCall("LoadImage", "UInt", hModule, "Str", "IMG2", "UInt", 0, "Int", 0, "Int", 0, "UInt", 0)
+	hImg3 := DllCall("LoadImage", "UInt", hModule, "Str", "IMG3", "UInt", 0, "Int", 0, "Int", 0, "UInt", 0)
+
+	; MsgBox(Type(hModule) ": " hModule)
+	MsgBox(Type(hImg1) ": " hImg1 ", " Type(hImg2) ": " hImg2 ", " Type(hImg3) ": " hImg3)
+*/
+; @Ahk2Exe-IgnoreBegin
+	/*hImg1 := LoadPicture(A_ScriptDir "\media\Keyboard_Keys_Text.png")
+	hImg2 := LoadPicture(A_ScriptDir "\media\Keyboard_Keys_Hovered_Text.png")
+	hImg3 := LoadPicture(A_ScriptDir "\media\Keyboard_Keys_Selected_Text.png")
+
+	MsgBox(Type(hImg1) ": " hImg1 ", " Type(hImg2) ": " hImg2 ", " Type(hImg3) ": " hImg3)*/
+; @Ahk2Exe-IgnoreEnd
 
 
-CoordMode "Mouse", "Screen"
 
+/*@Ahk2Exe-Keep
+	RegExMatch(A_AhkPath, "im)(32|64)(?=\.exe$)", &match)
+	U_Is64bitExe := match[] = "64"
+	
+	If (U_Is64bitExe != A_Is64bitOS) {
+		MsgBox("Vous avez la mauvaise variante d'Infinity Desktop !`n`nVotre système d'exploitation est en " (A_Is64bitOS ? "64" : "32") "-bit, mais cet exécutable est en " (U_Is64bitExe ? "64" : "32") "-bit. Veuillez télécharger la bonne variante pour votre système.`n`nCet avertissement peut aussi apparaître après avoir renommé le fichier .exe. Utilisez un raccourci à la place de renommer ce fichier.`n`n---------------------------------------------`n`nYou have the wrong variant of Infinity Desktop!`n`nYour OS is " (A_Is64bitOS ? "64" : "32") "-bit but this executable is " (U_Is64bitExe ? "64" : "32") "-bit. Please download the right variant for your system.`n`nThis message might also appear because you renamed the .exe file. Use a shortcut instead of renaming this file.", , "Iconx")
 
+		ExitApp
+	}
+*/
 
 ;@Ahk2Exe-IgnoreBegin
 	CoordMode "ToolTip", "Screen"
@@ -96,6 +138,8 @@ CoordMode "Mouse", "Screen"
 ;@Ahk2Exe-IgnoreEnd
 
 
+
+CoordMode "Mouse", "Screen"
 
 DisableHotkeys()
 
@@ -127,7 +171,7 @@ Monitors := SortArray(Monitors, CompareMonitors)
 For Monitor in Monitors {
 	Monitor.Gui.Opt("-DPIScale +AlwaysOnTop -Caption -Resize -Border" . (A_Index > 1 ? (" +Owner" Monitors[1].Gui.Hwnd) : ""))
 	Monitor.Gui.BackColor := "000000"
-	;WinSetTransparent(250, Monitor.Gui)
+	; WinSetTransparent(245, Monitor.Gui)
 	
 	If (Config.Fullscreen) {
 		mLeft := Monitor.Left
@@ -145,28 +189,48 @@ For Monitor in Monitors {
 	mHeight := mBottom - mTop
 	
 	Monitor.Ctrls.Push({
-		c: Monitor.Gui.Add("Text", "Center xm ym 0x200", ""),
+		c: Monitor.Gui.Add("Text", "Center xm ym 0x200"),
 		x: 0,
 		y: 0,
 		w: mHeight / 4,
 		h: mHeight / 4
 	})
+
 	Monitor.Ctrls[1].c.SetFont("s" (Monitor.Ctrls[1].h / 2) * 3/4 " w700 q4", "Arial")
+
+	Monitor.Ctrls.Push({
+		c: [
+			Monitor.Gui.Add("Picture", "BackgroundTrans", "media\KBK_T.png"),
+			Monitor.Gui.Add("Picture", "BackgroundTrans", "media\KBK_HT.png"),
+			Monitor.Gui.Add("Picture", "BackgroundTrans", "media\KBK_ST.png")
+		],
+		x: 0,
+		y: 0,
+		w: mHeight / 16 * (1957 / 104),
+		h: mHeight / 16
+	})
+
+	For Control in Monitor.Ctrls[2].c {
+		Control.Visible := False
+	}
 	
 	CenterControl(Monitor.Ctrls[1], mLeft, mTop, mRight, mBottom)
-	UpdateControl(Monitor.Ctrls[1])
+	CenterControl(Monitor.Ctrls[2], mLeft, mTop - (mBottom - mTop) * 0.9, mRight, mBottom)
+
+	UpdateControls(Monitor)
 	
 	Monitor.Gui.OnEvent("Close", ExitApp)
 	
 	Monitor.Gui.Show("x" mLeft " y" mTop " w" mWidth " h" mHeight)
 }
 
-Refresh()
 MstscList := FindMstscList()
 UpdateIDs()
 EnableHotkeys()
 
 SetTimer UpdateLoop, 50
+
+OnExit(BeforeExit, 1)
 
 
 
@@ -184,8 +248,6 @@ Delete::
 Escape:: {
 	ExitApp
 }
-
-OnExit(BeforeExit, 1)
 
 
 
@@ -250,25 +312,32 @@ UpdateLoop() {
 
 Refresh() {
 	For Monitor in Monitors {
+		For Control in Monitor.Ctrls[2].c {
+			Control.Visible := False
+		}
+
 		If (Monitor.Selected) {
 			If (Monitor.Hovered) {
-				Monitor.Gui.BackColor := "FCCA04"
 				Monitor.Ctrls[1].c.Opt("Background1B2021")
 				Monitor.Ctrls[1].c.SetFont("cFFFFFF")
 			} Else {
-				Monitor.Gui.BackColor := "FCCA04"
 				Monitor.Ctrls[1].c.Opt("BackgroundFFFFFF")
 				Monitor.Ctrls[1].c.SetFont("c000000")
 			}
+
+			Monitor.Gui.BackColor := "FCCA04"
+			Monitor.Ctrls[2].c[3].Visible := True
 		} Else {
 			If (Monitor.Hovered) {
 				Monitor.Gui.BackColor := "1B2021"
 				Monitor.Ctrls[1].c.Opt("Background8693AB")
 				Monitor.Ctrls[1].c.SetFont("cFAFAFF")
+				Monitor.Ctrls[2].c[2].Visible := True
 			} Else {
 				Monitor.Gui.BackColor := "000000"
 				Monitor.Ctrls[1].c.Opt("Background1B2021")
 				Monitor.Ctrls[1].c.SetFont("cFAFAFF")
+				Monitor.Ctrls[2].c[1].Visible := True
 			}
 		}
 		
@@ -285,9 +354,11 @@ Refresh() {
 		}
 		
 		If (Monitor.Hovered) {
-			Monitor.Ctrls[1].h := (mBottom - mTop) / 4 + 20
+			Monitor.Ctrls[1].w := (mBottom - mTop) / 4 + 20
+			Monitor.Ctrls[1].h := Monitor.Ctrls[1].w
 		} Else {
-			Monitor.Ctrls[1].h := (mBottom - mTop) / 4
+			Monitor.Ctrls[1].w := (mBottom - mTop) / 4
+			Monitor.Ctrls[1].h := Monitor.Ctrls[1].w
 		}
 		
 		Monitor.Ctrls[1].c.SetFont("s" (Monitor.Ctrls[1].h / 2) * 3/4)
@@ -332,7 +403,19 @@ CenterControl(ctrl, l, t, r, b) {
 }
 
 UpdateControl(ctrl) {
-	ctrl.c.Move(ctrl.x, ctrl.y, ctrl.w, ctrl.h)
+	If (Type(ctrl.c) = "Array") {
+		For Control in ctrl.c {
+			Control.Move(ctrl.x, ctrl.y, ctrl.w, ctrl.h)
+		}
+	} Else {
+		ctrl.c.Move(ctrl.x, ctrl.y, ctrl.w, ctrl.h)
+	}
+}
+
+UpdateControls(monitor) {
+	For ctrl in monitor.Ctrls {
+		UpdateControl(ctrl)
+	}
 }
 
 UpdateIDs() {
@@ -433,7 +516,7 @@ FindMstscList() {
 	DllCall("Shell32\SHChangeNotify", "UInt", 0x08000000, "UInt", 0, "Int", 0, "Int", 0)
 	
 	RunWait("PowerShell.exe -ExecutionPolicy Bypass -Command .\mstscReader.ps1", A_WorkingDir, "Hide")
-	
+
 	MstscText := FileRead("mstscMonitors.json")
 	Return SortArray(Jxon_Load(&MstscText), CompareMstsc)
 }
