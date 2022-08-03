@@ -28,14 +28,6 @@
 ;@Ahk2Exe-AddResource media\IconP.ico, 207
 ;@Ahk2Exe-AddResource media\IconSP.ico, 208
 
-; @Ahk2Exe-AddResource media\Keyboard_Keys_Text.png, IMG1
-; @Ahk2Exe-AddResource media\Keyboard_Keys_Hovered_Text.png, IMG2
-; @Ahk2Exe-AddResource media\Keyboard_Keys_Selected_Text.png, IMG3
-
-; @Ahk2Exe-AddResource media\mstscReader.ps1
-; @Ahk2Exe-AddResource media\mstscMonitors.json
-; @Ahk2Exe-AddResource media\custom.rdp
-
 
 
 Config := {
@@ -90,24 +82,6 @@ If (!DirExist("media")) {
 	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\media\Keyboard_Keys_Hovered_Text.png", "media\KBK_HT.png", 1)
 	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\media\Keyboard_Keys_Selected_Text.png", "media\KBK_ST.png", 1)
 }
-
-/* @Ahk2Exe-Keep
-	hModule := DllCall("GetModuleHandle", "UInt", 0) ; A_ScriptFullPath, "Cdecl Ptr"
-
-	hImg1 := DllCall("LoadImage", "UInt", hModule, "Str", "IMG1", "UInt", 0, "Int", 0, "Int", 0, "UInt", 0)
-	hImg2 := DllCall("LoadImage", "UInt", hModule, "Str", "IMG2", "UInt", 0, "Int", 0, "Int", 0, "UInt", 0)
-	hImg3 := DllCall("LoadImage", "UInt", hModule, "Str", "IMG3", "UInt", 0, "Int", 0, "Int", 0, "UInt", 0)
-
-	; MsgBox(Type(hModule) ": " hModule)
-	MsgBox(Type(hImg1) ": " hImg1 ", " Type(hImg2) ": " hImg2 ", " Type(hImg3) ": " hImg3)
-*/
-; @Ahk2Exe-IgnoreBegin
-	/*hImg1 := LoadPicture(A_ScriptDir "\media\Keyboard_Keys_Text.png")
-	hImg2 := LoadPicture(A_ScriptDir "\media\Keyboard_Keys_Hovered_Text.png")
-	hImg3 := LoadPicture(A_ScriptDir "\media\Keyboard_Keys_Selected_Text.png")
-
-	MsgBox(Type(hImg1) ": " hImg1 ", " Type(hImg2) ": " hImg2 ", " Type(hImg3) ": " hImg3)*/
-; @Ahk2Exe-IgnoreEnd
 
 
 
