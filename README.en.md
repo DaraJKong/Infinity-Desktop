@@ -12,6 +12,8 @@ Cherches-tu la [documentation en fraçais][frdocs] ?
    - [Settings](#settings)
    - [Default RDP Settings](#default-rdp-settings)
 4. [Troubleshooting](#troubleshooting)
+   - [Microsoft Defender SmartScreen's Warning](#microsoft-defender-smartscreens-warning)
+   - [Error: Wrong Variant](#error-wrong-variant)
 5. [Uninstallation](#uninstallation)
 6. [TODO](#todo)
 
@@ -71,11 +73,21 @@ If you want to save time, it is recommended that you save your preferences in th
 
 # Troubleshooting
 
+## Microsoft Defender SmartScreen's Warning
+
 For security reasons, [Microsoft Defender SmartScreen][msdss] will sometimes prevent you from running an untrusted application. If you trust the app and want to bypass the warning, click on "More info," and then "Run anyway."
 
 ![MS Defender SmartScreen's warning](media/MS_Defender_SmartScreen_1.png)
 
 ![MS Defender SmartScreen: Run anyway](media/MS_Defender_SmartScreen_2.png)
+
+## Error: Wrong Variant
+
+If the following message appears after attempting to open the executable file, it means you didn't download the right Infinity Desktop version. Please check if your OS is [32-bit or 64-bit][nbit] and download the correct executable.
+
+Renaming the .exe file can also trigger this error. The name of the executable has to end with either 32 or 64 to indicate the variant. If you don't like the file's name, simply create a shortcut to place on the desktop or taskbar instead of renaming the executable.
+
+![Alerte mauvaise variante du exe](media/Wrong_Variant.png)
 
 # Uninstallation
 

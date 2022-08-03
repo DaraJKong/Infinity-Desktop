@@ -84,7 +84,7 @@ If (!DirExist("media")) {
 	U_Is64bitExe := match[] = "64"
 
 	If (U_Is64bitExe != A_Is64bitOS) {
-		MsgBox("Vous avez la mauvaise variante d'Infinity Desktop !`n`nVotre système d'exploitation est en " (A_Is64bitOS ? "64" : "32") "-bit, mais cet exécutable est en " (U_Is64bitExe ? "64" : "32") "-bit. Veuillez télécharger la bonne variante pour votre système.`n`nCet avertissement peut aussi apparaître après avoir renommé le fichier .exe. Utilisez un raccourci à la place de renommer ce fichier.`n`n---------------------------------------------`n`nYou have the wrong variant of Infinity Desktop!`n`nYour OS is " (A_Is64bitOS ? "64" : "32") "-bit but this executable is " (U_Is64bitExe ? "64" : "32") "-bit. Please download the right variant for your system.`n`nThis message might also appear because you renamed the .exe file. Use a shortcut instead of renaming this file.", , "Iconx")
+		MsgBox("Vous avez la mauvaise variante d'Infinity Desktop !`n`nVotre système d'exploitation est en " (A_Is64bitOS ? "64" : "32") " bits, mais cet exécutable est en " (U_Is64bitExe ? "64" : "32") " bits. Veuillez télécharger la bonne variante pour votre système.`n`nCet avertissement peut aussi apparaître après avoir renommé le fichier .exe. Utilisez un raccourci à la place de renommer ce fichier.`n`n---------------------------------------------`n`nYou have the wrong variant of Infinity Desktop!`n`nYour OS is " (A_Is64bitOS ? "64" : "32") "-bit but this executable is " (U_Is64bitExe ? "64" : "32") "-bit. Please download the right variant for your system.`n`nThis message might also appear because you renamed the .exe file. Use a shortcut instead of renaming this file.", , "Iconx")
 
 		ExitApp
 	}

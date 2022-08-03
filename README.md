@@ -12,6 +12,8 @@ Are you looking for the [English documentation][endocs]?
    - [Configuration](#configuration)
    - [Paramètres RDP par défaut](#paramètres-rdp-par-défaut)
 4. [Dépannage](#dépannage)
+   - [Avertissement de Microsoft Defender SmartScreen](#avertissement-de-microsoft-defender-smartscreen)
+   - [Erreur : mauvaise variante](#erreur-mauvaise-variante)
 5. [Désinstallation](#désinstallation)
 6. [À FAIRE](#à-faire)
 
@@ -71,11 +73,21 @@ Si vous désirez sauver du temps, il est fortement conseillé d'enregistrer vos 
 
 # Dépannage
 
+## Avertissement de Microsoft Defender SmartScreen
+
 Pour des raisons de sécurité, [Microsoft Defender SmartScreen][msdss] empêche parfois l'exécution d'applications inconnues. Si vous avez confiance en l'auteur de cette application, cliquez sur « Informations complémentaires, » et puis sur « Exécuter quand même. »
 
 ![Alerte de MS Defender SmartScreen](media/MS_Defender_SmartScreen_1.png)
 
 ![MS Defender SmartScreen : Exécuter quand même](media/MS_Defender_SmartScreen_2.png)
+
+## Erreur : mauvaise variante
+
+Si le message ci-dessous apparaît après avoir ouvert le fichier exécutable, c'est que vous n'avez pas téléchargé la bonne version d'Infinity Desktop. Veuillez vérifier si votre système est en [32 ou 64 bits][nbit] et téléchargez le bon exécutable.
+
+Il se peut que le message apparaisse à cause que le fichier .exe a été renommé. Le nom du fichier exécutable doit absolument terminer par 32 ou 64 afin d'indiquer la variante. Si vous n'aimez pas le nom du fichier, créez un raccourci à placer sur le bureau ou sur dans barre des tâches au lieu de renommer l'exécutable.
+
+![Alerte mauvaise variante du exe](media/Wrong_Variant.png)
 
 # Désinstallation
 
