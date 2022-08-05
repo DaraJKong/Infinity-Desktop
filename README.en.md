@@ -15,7 +15,8 @@ Cherches-tu la [documentation en fraçais][frdocs] ?
    - [Microsoft Defender SmartScreen's Warning](#microsoft-defender-smartscreens-warning)
    - [Error: Wrong Variant](#error-wrong-variant)
 5. [Uninstallation](#uninstallation)
-6. [TODO](#todo)
+6. [Technical Informations](#technical-informations)
+7. [TODO](#todo)
 
 # Features
 
@@ -92,6 +93,10 @@ Renaming the .exe file can also trigger this error. The name of the executable h
 # Uninstallation
 
 To uninstall Infinity Desktop manually, you need to delete the folder "C:\\Users\\{USERNAME}\\AppData\\Roaming\\Infinity Desktop\\," the executable file and the shortcuts created by you (Desktop, Taskbar, Start menu). The program only ever modifies the folder mentioned above and the registry key "HKCU\\AppEvents\\Schemes\\Apps\\.Default\\SystemAsterisk\\.Current" in a temporary manner. So, no need to worry about it as the key is always put back to its previous value.
+
+# Technical Informations
+
+The AutoHotkey version currently used for the main branch of this project is [2.0-beta.6](https://github.com/Lexikos/AutoHotkey_L/tree/alpha).
 
 # TODO
 

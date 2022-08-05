@@ -15,7 +15,8 @@ Are you looking for the [English documentation][endocs]?
    - [Avertissement de Microsoft Defender SmartScreen](#avertissement-de-microsoft-defender-smartscreen)
    - [Erreur : mauvaise variante](#erreur--mauvaise-variante)
 5. [Désinstallation](#désinstallation)
-6. [À FAIRE](#à-faire)
+6. [Informations techniques](#informations-techniques)
+7. [À FAIRE](#à-faire)
 
 # Fonctionnalités
 
@@ -92,6 +93,10 @@ Il se peut que le message apparaisse à cause que le fichier .exe a été renomm
 # Désinstallation
 
 Pour désinstaller manuellement Infinity Desktop, il suffit de supprimer le dosier « C:\\Users\\{NOM D'UTILISATEUR}\\AppData\\Roaming\\Infinity Desktop\\, » puis de supprimer l'exécutable et les raccourcis créés par vous (Bureau, Barre des tâches, Menu démarrer). Le programme ne modifie rien d'autre que le dossier mentionné ci-haut ainsi que la clé de registre « HKCU\\AppEvents\\Schemes\\Apps\\.Default\\SystemAsterisk\\.Current » de façon très temporaire. Alors pas besoin de s'en préoccuper, car la valeur de la clé est toujours restaurée.
+
+# Informations techniques
+
+La version d'AutoHotkey présentement utilisée dans la branche principale de ce projet est [2.0-beta.6](https://github.com/Lexikos/AutoHotkey_L/tree/alpha).
 
 # À FAIRE
 
