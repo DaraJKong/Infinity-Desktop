@@ -31,10 +31,10 @@ Are you looking for the [English documentation][endocs]?
 
    | Version                      | Système d'exploitation | URL de téléchargement |
    | ---------------------------- | ---------------------- | --------------------- |
-   | [v1.1.2-beta][v2] (dernière) | Windows 10 32-bit      | [Télécharger][v2url1] |
-   |                              | Windows 10 64-bit      | [Télécharger][v2url2] |
-   | [v1.0.0.3-beta][v1]          | Windows 10 32-bit      | [Télécharger][v1url1] |
-   |                              | Windows 10 64-bit      | [Télécharger][v1url2] |
+   | [v1.1.2-beta][v2] (dernière) | Windows 10 32 bits      | [Télécharger][v2url1] |
+   |                              | Windows 10 64 bits      | [Télécharger][v2url2] |
+   | [v1.0.0.3-beta][v1]          | Windows 10 32 bits      | [Télécharger][v1url1] |
+   |                              | Windows 10 64 bits      | [Télécharger][v1url2] |
 
 2. Si RDC est déjà installé et activé, sautez cette étape. Suivez le lien suivant afin d'installer et/ou activer [Remote Desktop Connection][rdc].
 
