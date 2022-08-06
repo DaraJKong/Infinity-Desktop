@@ -29,10 +29,12 @@ Are you looking for the [English documentation][endocs]?
 
 1. Téléchargez la bonne variante du fichier exécutable en fonction de votre système ([32 ou 64 bits][nbit]) :
 
-   | Version             | Système d'exploitation | URL de téléchargement |
-   | ------------------- | ---------------------- | --------------------- |
-   | [v1.0.0.3-beta][v1] | Windows 10 32-bit      | [Télécharger][v1url1] |
-   |                     | Windows 10 64-bit      | [Télécharger][v1url2] |
+   | Version                      | Système d'exploitation | URL de téléchargement |
+   | ---------------------------- | ---------------------- | --------------------- |
+   | [v1.1.2-beta][v2] (dernière) | Windows 10 32-bit      | [Télécharger][v2url1] |
+   |                              | Windows 10 64-bit      | [Télécharger][v2url2] |
+   | [v1.0.0.3-beta][v1]          | Windows 10 32-bit      | [Télécharger][v1url1] |
+   |                              | Windows 10 64-bit      | [Télécharger][v1url2] |
 
 2. Si RDC est déjà installé et activé, sautez cette étape. Suivez le lien suivant afin d'installer et/ou activer [Remote Desktop Connection][rdc].
 
@@ -114,6 +116,9 @@ La version d'AutoHotkey présentement utilisée dans la branche principale de ce
 [msdss]: https://docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview
 [nbit]: https://support.microsoft.com/fr-fr/windows/windows-32-et-64-bits-forum-aux-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d
 [endocs]: https://github.com/DaraJKong/Infinity-Desktop/blob/main/README.en.md
+[v2]: https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.1.2-beta
+[v2url1]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.1.2-beta/InfinityDesktop32.exe
+[v2url2]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.1.2-beta/InfinityDesktop64.exe
 [v1]: https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.0.0.3-beta
 [v1url1]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.0.0.3-beta/InfinityDesktop32.exe
 [v1url2]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.0.0.3-beta/InfinityDesktop64.exe
