@@ -2,8 +2,6 @@
 
 Infinity Desktop enables fast multi monitor selection for Windows' [Remote Desktop Connection][rdc]. This app is based on [Scott Hanselman's blog post][blog].
 
-Cherches-tu la [documentation en fraçais][frdocs] ?
-
 <table>
    <thead>
       <tr>
@@ -129,7 +127,6 @@ The AutoHotkey version currently used for the main branch of this project is [2.
 [rdc]: https://support.microsoft.com/en-us/windows/how-to-use-remote-desktop-5fe128d5-8fb1-7a23-3b8a-41e636865e8c
 [msdss]: https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview
 [nbit]: https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d
-[frdocs]: https://github.com/DaraJKong/Infinity-Desktop
 [v2]: https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.1.2-beta
 [v2url1]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.1.2-beta/InfinityDesktop32.exe
 [v2url2]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.1.2-beta/InfinityDesktop64.exe
