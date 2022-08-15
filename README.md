@@ -2,7 +2,19 @@
 
 Infinity Desktop permet la sélection rapide de plusieurs écrans pour la [Remote Desktop Connection][rdc] de Windows. Cette application est basée sur cet [article de Scott Hanselman][blog].
 
-Are you looking for the [English documentation][endocs]?
+<table>
+   <thead>
+      <tr>
+         <th colspan=2>Langue de la documentation</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td align="center"><a href="https://github.com/DaraJKong/Infinity-Desktop">Français</a></td>
+         <td align="center"><a href="https://github.com/DaraJKong/Infinity-Desktop/blob/main/README.en.md">English</a></td>
+      </tr>
+   </tbody>
+</table>
 
 #### Table des matières
 
@@ -31,10 +43,10 @@ Are you looking for the [English documentation][endocs]?
 
    | Version                      | Système d'exploitation | URL de téléchargement |
    | ---------------------------- | ---------------------- | --------------------- |
-   | [v1.1.2-beta][v2] (dernière) | Windows 10 32 bits      | [Télécharger][v2url1] |
-   |                              | Windows 10 64 bits      | [Télécharger][v2url2] |
-   | [v1.0.0.3-beta][v1]          | Windows 10 32 bits      | [Télécharger][v1url1] |
-   |                              | Windows 10 64 bits      | [Télécharger][v1url2] |
+   | [v1.1.2-beta][v2] (dernière) | Windows 10 32 bits     | [Télécharger][v2url1] |
+   |                              | Windows 10 64 bits     | [Télécharger][v2url2] |
+   | [v1.0.0.3-beta][v1]          | Windows 10 32 bits     | [Télécharger][v1url1] |
+   |                              | Windows 10 64 bits     | [Télécharger][v1url2] |
 
 2. Si RDC est déjà installé et activé, sautez cette étape. Suivez le lien suivant afin d'installer et/ou activer [Remote Desktop Connection][rdc].
 
@@ -115,7 +127,6 @@ La version d'AutoHotkey présentement utilisée dans la branche principale de ce
 [rdc]: https://support.microsoft.com/fr-fr/windows/utilisation-du-bureau-%C3%A0-distance-5fe128d5-8fb1-7a23-3b8a-41e636865e8c
 [msdss]: https://docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview
 [nbit]: https://support.microsoft.com/fr-fr/windows/windows-32-et-64-bits-forum-aux-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d
-[endocs]: https://github.com/DaraJKong/Infinity-Desktop/blob/main/README.en.md
 [v2]: https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.1.2-beta
 [v2url1]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.1.2-beta/InfinityDesktop32.exe
 [v2url2]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.1.2-beta/InfinityDesktop64.exe
