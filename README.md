@@ -56,7 +56,7 @@ Infinity Desktop permet la sélection rapide de plusieurs écrans pour la [Remot
 
 # Guide d'utilisation
 
-Pour vous connecter à votre bureau à distance en utilisant plusieurs écrans, boucle-cliquez sur le fichier exécutable afin de l'ouvrir. Chacun de vos écrans va devenir noir pendant un moment, le temps que l'application charge, puis chaque d'eux affichera un chiffre représentant son numéro d'identification.
+Pour vous connecter à votre bureau à distance en utilisant plusieurs écrans, double-cliquez sur le fichier exécutable afin de l'ouvrir. Chacun de vos écrans va devenir noir pendant un moment, le temps que l'application charge, puis chaque d'eux affichera un chiffre représentant son numéro d'identification.
 
 Faites un clic gauche sur n'importe quel écran pour le sélectioner ou le désélectionner. Un fond d'écran jaune signifie que l'écran sera utilisé pour l'ordinateur à distance. Les moniteurs non sélectionnés vont servir pour votre ordinateur portable (ou l'ordinateur que vous utilisez en ce moment). Lorsque vous êtes satisfait, appuyez sur la touche Entrer (Enter) ou la Barre d'espace. Les écrans vont retrouver leur état naturel et la connexion à distance va s'ouvrir en utilisant les paramètres d'un fichier RDP personnalisé.
 
