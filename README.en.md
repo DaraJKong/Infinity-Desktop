@@ -4,6 +4,20 @@ Infinity Desktop enables fast multi monitor selection for Windows' [Remote Deskt
 
 Cherches-tu la [documentation en fraçais][frdocs] ?
 
+<table>
+   <thead>
+      <tr>
+         <th colspan=2>Language of Documentation</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td align="center"><a href="https://github.com/DaraJKong/Infinity-Desktop">Français</a></td>
+         <td align="center"><a href="https://github.com/DaraJKong/Infinity-Desktop/blob/main/README.en.md">English</a></td>
+      </tr>
+   </tbody>
+</table>
+
 #### Table of Contents
 
 1. [Features](#features)
