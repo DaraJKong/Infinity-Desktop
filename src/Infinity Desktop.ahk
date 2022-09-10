@@ -14,12 +14,12 @@
 ;@Ahk2Exe-SetDescription Fast Monitor Selection for Remote Desktop Connection
 ;@Ahk2Exe-SetCopyright © 2022 Dara Kong. All rights reserved.
 ;@Ahk2Exe-SetCompanyName BRP
-;@Ahk2Exe-SetVersion 1.1.2
+;@Ahk2Exe-SetVersion 1.2.0
 ;@Ahk2Exe-SetLanguage 0x1009
 ;@Ahk2Exe-SetOrigFilename Infinity Desktop.ahk
 
-;@Ahk2Exe-Base C:\Users\kongda\AppData\Roaming\AutoHotkey_2.0-beta.6\AutoHotkey32.exe, C:\Users\kongda\Documents\GitHub\Infinity-Desktop\target\InfinityDesktop32
-;@Ahk2Exe-Base C:\Users\kongda\AppData\Roaming\AutoHotkey_2.0-beta.6\AutoHotkey64.exe, C:\Users\kongda\Documents\GitHub\Infinity-Desktop\target\InfinityDesktop64
+;@Ahk2Exe-Base C:\Users\kongda\AppData\Roaming\AutoHotkey_2.0-beta.8\AutoHotkey32.exe, C:\Users\kongda\AppData\Roaming\GitHub\Infinity-Desktop\target\InfinityDesktop32
+;@Ahk2Exe-Base C:\Users\kongda\AppData\Roaming\AutoHotkey_2.0-beta.8\AutoHotkey64.exe, C:\Users\kongda\AppData\Roaming\GitHub\Infinity-Desktop\target\InfinityDesktop64
 
 ;@Ahk2Exe-SetMainIcon media\Icon.ico
 
@@ -53,18 +53,18 @@ If (!DirExist(ResourcesPath)) {
 SetWorkingDir(ResourcesPath)
 
 If (!FileExist("mstscReader.ps1")) {
-	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\mstscReader.ps1", "mstscReader.ps1", 1)
+	FileInstall("C:\Users\kongda\AppData\Roaming\GitHub\Infinity-Desktop\src\mstscReader.ps1", "mstscReader.ps1", 1)
 }
 
 If (!FileExist("mstscMonitors.json")) {
-	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\mstscMonitors.json", "mstscMonitors.json", 1)
+	FileInstall("C:\Users\kongda\AppData\Roaming\GitHub\Infinity-Desktop\src\mstscMonitors.json", "mstscMonitors.json", 1)
 }
 
 If (FileExist(A_MyDocuments "\Default.rdp")) {
 	FileCopy(A_MyDocuments "\Default.rdp", "custom.rdp", 1)
 	FileSetAttrib("-RSH", "custom.rdp")
 } Else {
-	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\custom.rdp", "custom.rdp", 1)
+	FileInstall("C:\Users\kongda\AppData\Roaming\GitHub\Infinity-Desktop\src\custom.rdp", "custom.rdp", 1)
 }
 
 If (FileExist("config.ini")) {
@@ -74,9 +74,9 @@ If (FileExist("config.ini")) {
 If (!DirExist("media")) {
 	DirCreate("media")
 
-	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\media\Keyboard_Keys_Text.png", "media\KBK_T.png", 1)
-	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\media\Keyboard_Keys_Hovered_Text.png", "media\KBK_HT.png", 1)
-	FileInstall("C:\Users\kongda\Documents\GitHub\Infinity-Desktop\src\media\Keyboard_Keys_Selected_Text.png", "media\KBK_ST.png", 1)
+	FileInstall("C:\Users\kongda\AppData\Roaming\GitHub\Infinity-Desktop\src\media\Keyboard_Keys_Text.png", "media\KBK_T.png", 1)
+	FileInstall("C:\Users\kongda\AppData\Roaming\GitHub\Infinity-Desktop\src\media\Keyboard_Keys_Hovered_Text.png", "media\KBK_HT.png", 1)
+	FileInstall("C:\Users\kongda\AppData\Roaming\GitHub\Infinity-Desktop\src\media\Keyboard_Keys_Selected_Text.png", "media\KBK_ST.png", 1)
 }
 
 /*@Ahk2Exe-Keep
@@ -279,25 +279,25 @@ Refresh() {
 
 		If (Monitor.Selected) {
 			If (Monitor.Hovered) {
-				Monitor.Ctrls[1].c.Opt("Background1B2021")
-				Monitor.Ctrls[1].c.SetFont("cFFFFFF")
-			} Else {
 				Monitor.Ctrls[1].c.Opt("BackgroundFFFFFF")
-				Monitor.Ctrls[1].c.SetFont("c000000")
+				Monitor.Ctrls[1].c.SetFont("c333132")
+			} Else {
+				Monitor.Ctrls[1].c.Opt("Background333132")
+				Monitor.Ctrls[1].c.SetFont("cFFFFFF")
 			}
 
-			Monitor.Gui.BackColor := "FCCA04"
+			Monitor.Gui.BackColor := "FFD200"
 			Monitor.Ctrls[2].c[3].Visible := True
 		} Else {
 			If (Monitor.Hovered) {
-				Monitor.Gui.BackColor := "1B2021"
-				Monitor.Ctrls[1].c.Opt("Background8693AB")
-				Monitor.Ctrls[1].c.SetFont("cFAFAFF")
+				Monitor.Gui.BackColor := "333132"
+				Monitor.Ctrls[1].c.Opt("BackgroundBFC4CA")
+				Monitor.Ctrls[1].c.SetFont("cFFFFFF")
 				Monitor.Ctrls[2].c[2].Visible := True
 			} Else {
 				Monitor.Gui.BackColor := "000000"
-				Monitor.Ctrls[1].c.Opt("Background1B2021")
-				Monitor.Ctrls[1].c.SetFont("cFAFAFF")
+				Monitor.Ctrls[1].c.Opt("Background8A9199")
+				Monitor.Ctrls[1].c.SetFont("cFFFFFF")
 				Monitor.Ctrls[2].c[1].Visible := True
 			}
 		}
@@ -426,7 +426,12 @@ LoadData(filePath) {
 	Config.Fullscreen := Integer(IniRead(filePath, "Configuration", "Fullscreen", "1"))
 	Config.EditConnection := Integer(IniRead(filePath, "Configuration", "EditConnection", "1"))
 
-	global LastIDs := StrSplit(IniRead(filePath, "LocalData", "LastIDs", ""), ",", "`t")
+	Try {
+		global LastIDs := StrSplit(IniRead(filePath, "LocalData", "LastIDs", ""), ",", "`t")
+	}
+	Catch {
+		global LastIDs := Array()
+	}
 }
 
 SaveData(filePath) {
