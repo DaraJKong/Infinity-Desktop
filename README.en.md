@@ -43,7 +43,9 @@ Infinity Desktop enables fast multi monitor selection for Windows' [Remote Deskt
 
    | Version                    | Operating System  | Download URL       |
    | -------------------------- | ----------------- | ------------------ |
-   | [v1.1.2-beta][v2] (latest) | Windows 10 32-bit | [Download][v2url1] |
+   | [v1.2.0-beta][v3] (latest) | Windows 10 32-bit | [Download][v3url1] |
+   |                            | Windows 10 64-bit | [Download][v3url2] |
+   | [v1.1.2-beta][v2]          | Windows 10 32-bit | [Download][v2url1] |
    |                            | Windows 10 64-bit | [Download][v2url2] |
    | [v1.0.0.3-beta][v1]        | Windows 10 32-bit | [Download][v1url1] |
    |                            | Windows 10 64-bit | [Download][v1url2] |
@@ -54,11 +56,15 @@ Infinity Desktop enables fast multi monitor selection for Windows' [Remote Deskt
 
 4. If a warning popup appears, please refer to the [Troubleshooting](#troubleshooting) section to overcome it.
 
+5. Optionally, you can create a desktop shortcut and pin it to the taskbar.
+
 # How To Use
 
 To connect to your remote desktop using multiple monitors, double-click on the executable file to open it. All of your screens will turn black for a moment and once everything is loaded, you will see numbers appearing on each monitor. These numbers represent the monitors' IDs.
 
 Left-click on any screen to select or unselect it. A yellow background means the monitor is selected for the remote connection. Monitors you don't select will be used for your current computer. Once you are satisfied with your setup, simply press the Enter key or the Space key. The screens will go back to normal as the remote connection is starting using a custom RDP file.
+
+![Graphical User Interface](media/Graphical_User_Interface.png)
 
 To cancel the remote connection, you can press the Escape key, the Delete key or the Backspace key.
 
@@ -114,19 +120,22 @@ The AutoHotkey version currently used for the main branch of this project is [2.
 
 # TODO
 
-- Enable user to change settings easily
-- How to use tips and shortcuts map, URL to Github
-- Notify user when selected monitors are of different resolutions and might not give expected results
-- Easy remembering, saving, managing of RDP config and settings files, reload settings automatically
-- Workaround for not able to select monitors of different resolutions
-- Workaround for the resolution scaling being off sometimes (additional feature)
-- Remember relative positions of selected monitors (main monitor, left, middle, right, first, last) and implement universal pattern that adapts when number of monitors is not the same (in addition to remembering IDs)
-- Create automatic uninstaller
+- [ ] Enable user to change settings easily
+- [ ] How to use tips and ~~shortcuts reminder~~, URL to Github
+- [ ] Notify user when selected monitors are of different resolutions and might not give expected results
+- [ ] Easy remembering, saving, managing of RDP config and settings files, reload settings automatically
+- [ ] Workaround for not able to select monitors of different resolutions
+- [ ] Workaround for the resolution scaling being off sometimes (additional feature)
+- [ ] Remember relative positions of selected monitors (main monitor, left, middle, right, first, last) and implement universal pattern that adapts when number of monitors is not the same (in addition to remembering IDs)
+- [ ] Create automatic uninstaller
 
 [blog]: https://www.hanselman.com/blog/how-to-remote-desktop-fullscreen-rdp-with-just-some-of-your-multiple-monitors
 [rdc]: https://support.microsoft.com/en-us/windows/how-to-use-remote-desktop-5fe128d5-8fb1-7a23-3b8a-41e636865e8c
 [msdss]: https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview
 [nbit]: https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d
+[v3]: https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.2.0-beta
+[v3url1]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.2.0-beta/InfinityDesktop32.exe
+[v3url2]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.2.0-beta/InfinityDesktop64.exe
 [v2]: https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.1.2-beta
 [v2url1]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.1.2-beta/InfinityDesktop32.exe
 [v2url2]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.1.2-beta/InfinityDesktop64.exe

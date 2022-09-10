@@ -43,7 +43,9 @@ Infinity Desktop permet la sélection rapide de plusieurs écrans pour la [Remot
 
    | Version                      | Système d'exploitation | URL de téléchargement |
    | ---------------------------- | ---------------------- | --------------------- |
-   | [v1.1.2-beta][v2] (dernière) | Windows 10 32 bits     | [Télécharger][v2url1] |
+   | [v1.2.0-beta][v3] (dernière) | Windows 10 32 bits     | [Télécharger][v3url1] |
+   |                              | Windows 10 64 bits     | [Télécharger][v3url2] |
+   | [v1.1.2-beta][v2]            | Windows 10 32 bits     | [Télécharger][v2url1] |
    |                              | Windows 10 64 bits     | [Télécharger][v2url2] |
    | [v1.0.0.3-beta][v1]          | Windows 10 32 bits     | [Télécharger][v1url1] |
    |                              | Windows 10 64 bits     | [Télécharger][v1url2] |
@@ -54,11 +56,15 @@ Infinity Desktop permet la sélection rapide de plusieurs écrans pour la [Remot
 
 4. Si un message d'avertissement apparaît, veuillez vous référer à la section [Dépannage](#dépannage).
 
+5. Si vous le désirez, vous pouvez créer un raccourci de bureau et l'épingler sur la barre des tâches.
+
 # Guide d'utilisation
 
 Pour vous connecter à votre bureau à distance en utilisant plusieurs écrans, double-cliquez sur le fichier exécutable afin de l'ouvrir. Chacun de vos écrans va devenir noir pendant un moment, le temps que l'application charge, puis chaque d'eux affichera un chiffre représentant son numéro d'identification.
 
 Faites un clic gauche sur n'importe quel écran pour le sélectioner ou le désélectionner. Un fond d'écran jaune signifie que l'écran sera utilisé pour l'ordinateur à distance. Les moniteurs non sélectionnés vont servir pour votre ordinateur portable (ou l'ordinateur que vous utilisez en ce moment). Lorsque vous êtes satisfait, appuyez sur la touche Entrer (Enter) ou la Barre d'espace. Les écrans vont retrouver leur état naturel et la connexion à distance va s'ouvrir en utilisant les paramètres d'un fichier RDP personnalisé.
+
+![Interface utilisateur graphique](media/Graphical_User_Interface.png)
 
 Pour annuler la connexion à distance, il suffit d'appuyer sur la touche Échap (ESC), la touche Supprimer (DEL) ou la touche Retour arrière (Backspace).
 
@@ -114,19 +120,22 @@ La version d'AutoHotkey présentement utilisée dans la branche principale de ce
 
 # À FAIRE
 
-- Permettre à l'utilisateur de changer facilement les paramètres
-- Rappels des raccourcis clavier ainsi que de comment utiliser, URL vers Github
-- Notifier l'utilisateur lorsqu'il sélectionne des écrans de différentes résolutions que le résultat peut ne pas être celui désiré
-- Sauvegarde, gestion, chargement faciles du fichier de configuration et du fichier de connexion
-- Solution de contournement pour sélectionner des écrans de différentes résolutions
-- Solution de contournement pour que la résolutions et l'échelle des écrans soit toujours correcte
-- Se souvenir des positions relatives des écrans (écran principal, gauche, droite, milieu, premier, dernier etc.) et implémenter un algorithme universel qui adapte les numéros lorsqu'ils changent (en plus de se souvenir des numéros d'identification)
-- Créer un désinstallateur automatique
+- [ ] Permettre à l'utilisateur de changer facilement les paramètres
+- [ ] Rappels des ~~raccourcis clavier~~ ainsi que de comment utiliser, URL vers Github
+- [ ] Notifier l'utilisateur lorsqu'il sélectionne des écrans de différentes résolutions que le résultat peut ne pas être celui désiré
+- [ ] Sauvegarde, gestion, chargement faciles du fichier de configuration et du fichier de connexion
+- [ ] Solution de contournement pour sélectionner des écrans de différentes résolutions
+- [ ] Solution de contournement pour que la résolutions et l'échelle des écrans soit toujours correcte
+- [ ] Se souvenir des positions relatives des écrans (écran principal, gauche, droite, milieu, premier, dernier etc.) et implémenter un algorithme universel qui adapte les numéros lorsqu'ils changent (en plus de se souvenir des numéros d'identification)
+- [ ] Créer un désinstallateur automatique
 
 [blog]: https://www.hanselman.com/blog/how-to-remote-desktop-fullscreen-rdp-with-just-some-of-your-multiple-monitors
 [rdc]: https://support.microsoft.com/fr-fr/windows/utilisation-du-bureau-%C3%A0-distance-5fe128d5-8fb1-7a23-3b8a-41e636865e8c
 [msdss]: https://docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview
 [nbit]: https://support.microsoft.com/fr-fr/windows/windows-32-et-64-bits-forum-aux-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d
+[v3]: https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.2.0-beta
+[v3url1]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.2.0-beta/InfinityDesktop32.exe
+[v3url2]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.2.0-beta/InfinityDesktop64.exe
 [v2]: https://github.com/DaraJKong/Infinity-Desktop/releases/tag/v1.1.2-beta
 [v2url1]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.1.2-beta/InfinityDesktop32.exe
 [v2url2]: https://github.com/DaraJKong/Infinity-Desktop/releases/download/v1.1.2-beta/InfinityDesktop64.exe
