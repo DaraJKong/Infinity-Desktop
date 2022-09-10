@@ -1,6 +1,6 @@
 ![Infinity Desktop](media/Logo.png)
 
-Infinity Desktop permet la sélection rapide de plusieurs écrans pour la [Remote Desktop Connection][rdc] de Windows. Cette application est basée sur cet [article de Scott Hanselman][blog].
+Infinity Desktop permet la sélection rapide de plusieurs écrans pour la [Remote Desktop Connection][rdc] de Windows. Cette application est basée sur cet [article de Scott Hanselman][blog] et sur ce [script PowerShell de djwork][script].
 
 <table>
    <thead>
@@ -29,6 +29,7 @@ Infinity Desktop permet la sélection rapide de plusieurs écrans pour la [Remot
 5. [Désinstallation](#désinstallation)
 6. [Informations techniques](#informations-techniques)
 7. [À FAIRE](#à-faire)
+8. [Ressources utiles](#ressources-utiles)
 
 # Fonctionnalités
 
@@ -127,9 +128,15 @@ La version d'AutoHotkey présentement utilisée dans la branche principale de ce
 - [ ] Solution de contournement pour sélectionner des écrans de différentes résolutions
 - [ ] Solution de contournement pour que la résolutions et l'échelle des écrans soit toujours correcte
 - [ ] Se souvenir des positions relatives des écrans (écran principal, gauche, droite, milieu, premier, dernier etc.) et implémenter un algorithme universel qui adapte les numéros lorsqu'ils changent (en plus de se souvenir des numéros d'identification)
-- [ ] Créer un désinstallateur automatique
+- [ ] Créer un installateur et un désinstallateur automatique
+
+# Ressources utiles
+
+- Scott Hanselman a écrit un excellent article qui explique comment configurer un fichier .rdp afin d'utiliser RDC avec seulement quelques moniteurs : https://www.hanselman.com/blog/how-to-remote-desktop-fullscreen-rdp-with-just-some-of-your-multiple-monitors
+- Un grand merci à djwork sur superuser.com pour son script PowerShell qui permet de lire le texte d'une boîte de dialogue Windows : https://superuser.com/questions/1695016/grabbing-the-output-of-windows-message-box-to-a-string
 
 [blog]: https://www.hanselman.com/blog/how-to-remote-desktop-fullscreen-rdp-with-just-some-of-your-multiple-monitors
+[script]: https://superuser.com/questions/1695016/grabbing-the-output-of-windows-message-box-to-a-string
 [rdc]: https://support.microsoft.com/fr-fr/windows/utilisation-du-bureau-%C3%A0-distance-5fe128d5-8fb1-7a23-3b8a-41e636865e8c
 [msdss]: https://docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview
 [nbit]: https://support.microsoft.com/fr-fr/windows/windows-32-et-64-bits-forum-aux-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d

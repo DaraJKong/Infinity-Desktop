@@ -1,6 +1,6 @@
 ![Infinity Desktop](media/Logo.png)
 
-Infinity Desktop enables fast multi monitor selection for Windows' [Remote Desktop Connection][rdc]. This app is based on [Scott Hanselman's blog post][blog].
+Infinity Desktop enables fast multi monitor selection for Windows' [Remote Desktop Connection][rdc]. This app is based on [Scott Hanselman's blog post][blog] and [djwork's PowerShell script][script].
 
 <table>
    <thead>
@@ -29,6 +29,7 @@ Infinity Desktop enables fast multi monitor selection for Windows' [Remote Deskt
 5. [Uninstallation](#uninstallation)
 6. [Technical Informations](#technical-informations)
 7. [TODO](#todo)
+8. [Useful Resources](#useful-resources)
 
 # Features
 
@@ -127,9 +128,15 @@ The AutoHotkey version currently used for the main branch of this project is [2.
 - [ ] Workaround for not able to select monitors of different resolutions
 - [ ] Workaround for the resolution scaling being off sometimes (additional feature)
 - [ ] Remember relative positions of selected monitors (main monitor, left, middle, right, first, last) and implement universal pattern that adapts when number of monitors is not the same (in addition to remembering IDs)
-- [ ] Create automatic uninstaller
+- [ ] Create automatic installer and uninstaller
+
+# Useful Resources
+
+- Scott Hanselman wrote an excellent article explaining how to configure a custom .rdp file for using RDC with some monitors: https://www.hanselman.com/blog/how-to-remote-desktop-fullscreen-rdp-with-just-some-of-your-multiple-monitors
+- Thanks to djwork on superuser.com for his PowerShell script that grabs the output of Windows message box and saves it to a string: https://superuser.com/questions/1695016/grabbing-the-output-of-windows-message-box-to-a-string
 
 [blog]: https://www.hanselman.com/blog/how-to-remote-desktop-fullscreen-rdp-with-just-some-of-your-multiple-monitors
+[script]: https://superuser.com/questions/1695016/grabbing-the-output-of-windows-message-box-to-a-string
 [rdc]: https://support.microsoft.com/en-us/windows/how-to-use-remote-desktop-5fe128d5-8fb1-7a23-3b8a-41e636865e8c
 [msdss]: https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview
 [nbit]: https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d

@@ -1,3 +1,6 @@
+#The author of this PowerShell script is djwork on superuser.com
+#The script is part of his answer to this question: https://superuser.com/questions/1695016/grabbing-the-output-of-windows-message-box-to-a-string
+
 Add-Type -AssemblyName 'UIAutomationClient'
 
 #Start mstsc.exe with the argument /l, retain a process reference in $mstscProc
