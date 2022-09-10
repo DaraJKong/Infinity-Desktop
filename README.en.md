@@ -110,7 +110,7 @@ To uninstall Infinity Desktop manually, you need to delete the folder "C:\\Users
 
 # Technical Informations
 
-The AutoHotkey version currently used for the main branch of this project is [2.0-beta.6](https://github.com/Lexikos/AutoHotkey_L/tree/alpha).
+The AutoHotkey version currently used for the main branch of this project is [2.0-beta.8](https://github.com/Lexikos/AutoHotkey_L/tree/alpha).
 
 # TODO
 

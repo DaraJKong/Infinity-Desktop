@@ -110,7 +110,7 @@ Pour désinstaller manuellement Infinity Desktop, il suffit de supprimer le dosi
 
 # Informations techniques
 
-La version d'AutoHotkey présentement utilisée dans la branche principale de ce projet est [2.0-beta.6](https://github.com/Lexikos/AutoHotkey_L/tree/alpha).
+La version d'AutoHotkey présentement utilisée dans la branche principale de ce projet est [2.0-beta.8](https://github.com/Lexikos/AutoHotkey_L/tree/alpha).
 
 # À FAIRE
 
